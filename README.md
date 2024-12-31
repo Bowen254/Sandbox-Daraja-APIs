@@ -1,6 +1,6 @@
 ## Sandbox Daraja API for the STK Push - MPESA Prompt
 
-#### Pre-requisites.
+#### Pre-requisite.
 Install NodeJS and the npm packages as seen on the start of the server file.
 
 #### The sandbox is only for the Test purposes
