@@ -8,7 +8,7 @@ const port = 4003;
 
 // Initialize express
 const app = express();
-app.use(bodyParser.json());  // Middleware for parsing JSON bodies
+app.use(bodyParser.json());  // parsing JSON bodies
 
 const username = process.env.MPESA_CONSUMER_KEY;
 const password = process.env.MPESA_CONSUMER_SECRET;
@@ -92,7 +92,7 @@ app.post('api-test/callback', (req, res) => {
   const paymentResponse = req.body;
   console.log('Payment Callback Response:', paymentResponse);
 
-  // You can process the response and update your database or perform other actions here.
+  // here you can add more processes and update your database or perform other actions here.
 
   res.status(200).send('Callback received');
 });
@@ -106,7 +106,6 @@ app.get('/init', (req, res) => {
 })
 
 // Start the local server
-app.listen(port || 3007, () => {
-  getAccessToken();
+app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });
